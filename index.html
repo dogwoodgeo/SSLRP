@@ -1,66 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-  <title>LRWRA | Service Line Replacement Program Map</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>LRWRA | Sewer Service Line Replacement Program</title>
   <link rel="shortcut icon" href="images/shortcut.ico">
-  <link rel="stylesheet" href="https://js.arcgis.com/4.1/esri/css/main.css">
-  <script src="https://js.arcgis.com/4.1/"></script>
-
-    <style>
-        html,
-        body,
-        #viewDiv {
-            padding: 0;
-            margin: 0;
-            height: 100%;
-            width: 100%;
-        }
-        #select-div {
-            font-family: Arial, "serif";
-            font-weight: bold;
-            text-align: center;
-            width: auto;
-            line-height: 15px;
-            background-color: white;
-            border: 1px solid darkgray;
-            border-radius: 8px;
-            padding: 8px;
-            opacity: 0.92;
-        }
-        a:link {
-            color: blue;
-            background-color: transparent;
-            text-decoration: underline;
-        }
-        a:visited {
-            color: purple;
-            background-color: transparent;
-            text-decoration: underline;
-        }
-        a:hover {
-            color: red;
-            background-color: transparent;
-            text-decoration: underline;
-        }
-    </style>
-    <script src="script.js"></script>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.12/esri/themes/light/main.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css"/>
+  <script src="https://js.arcgis.com/4.12/"></script>
+  <script src="js/app.js"></script>
 </head>
+
 <body>
-    <div id="viewDiv"></div>
-    <div id="select-div">
-        <a href="http://www.lrwu.com/sslrp/" target="_blank" style="font-size: medium;">SERVICE LINE REPLACEMENT PROGRAM</a>
-        <br><br>System Wide Since January 1, 2013
-        <iframe src='https://gis.lrwu.com/sslrp/reports/Total.htm' frameborder='0' width='100%' height='100%'
-                style='width: 100%; height: 100px; display: block; padding: 0; margin: 0;'></iframe>
-        <hr style="color: darkgray">
-        Reimbursement Layer Selection<br><br>
-        <select id="layer-select">
-            <option value="0" selected>Since Jan 1, 2013</option>
-            <option value="1">Current Calendar Year</option>
-        </select>
-    </div>
+  <div id="viewDiv"></div>
+  <div id="select-div">
+      <a href="http://www.lrwra.com/programs/sslrp/" target="_blank" style="font-size: medium;">SERVICE LINE REPLACEMENT PROGRAM</a>
+      <br><br>System Wide Since January 1, 2013
+      <iframe src='https://gis.lrwu.com/sslrp/reports/Total.htm' frameborder='0' width='100%' height='100%'
+              style='width: 100%; height: 100px; display: block; padding: 0; margin: 0;'></iframe>
+      <hr style="color: darkgray">
+      Select Layer<br><br>
+      <select id="layer-select">
+          <option value="0" selected>Since 2013</option>
+          <option value="1">Current Year</option>
+      </select>
+  </div>
 </body>
 </html>
